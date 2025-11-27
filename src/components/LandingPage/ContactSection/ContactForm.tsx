@@ -77,7 +77,7 @@ const ContactForm = () => {
     <div className="flex flex-col bg-gradient py-10 px-12 rounded-2xl text-background w-full">
       <AnimatedWrapper from="left">
         <h2 className="text-3xl lg:text-5xl font-bold uppercase mb-6">
-          Any projects?
+         For Any projects?
         </h2>
       </AnimatedWrapper>
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>

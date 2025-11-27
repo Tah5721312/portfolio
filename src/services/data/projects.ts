@@ -1,22 +1,22 @@
 export const projects = [
   {
     id: '1',
-    title: 'Forever E-commerce',
+    title: 'Clinic-app',
     description:
-      'A fully functional e-commerce platform built using React.js, Bootstrap, and Firebase. Features: product listing, search, cart, checkout, and authentication. Focused on performance optimization and cross-browser compatibility. Deployed the application online, ensuring accessibility and real-world usability.',
-    technologies: ['React.js', 'Firebase', 'Bootstrap'],
-    image: '/images/forever-ecommerce.png',
-    demoLink: 'https://forever-ecommerce-mocha.vercel.app/',
-    githubLink: 'https://github.com/Kimo-Mo/forever-ecommerce',
+      'A modern clinic management application built with Next.js 14 App Router, React 18, and TypeScript. Features a beautiful UI with Tailwind CSS 3, comprehensive testing with Jest, and a complete development workflow including ESLint, Prettier, Husky, and GitHub Actions. Includes automatic sitemap generation, Open Graph optimization, and follows conventional commit standards for maintainable code.',
+    technologies: ['Next.js 14', 'React 18', 'TypeScript', 'Tailwind CSS 3', 'Jest', 'ESLint', 'Prettier', 'Husky', 'GitHub Actions'],
+    image: '/images/clinic.png',
+    demoLink: 'https://clinic-app-prisma-postgre.vercel.app',
+    githubLink: 'https://github.com/Tah5721312/clinic-app-prisma-postgre',
   },
   {
     id: '2',
-    title: 'Exclusive E-commerce',
+    title: 'Inventory',
     description:
-      'Responsive e-commerce website using HTML5, Tailwind CSS, and JavaScript. Implemented cart, Wishlist, and Firebase authentication. Integrated ScrollReveal.js for animated UI and dynamic product filters. Enhanced user experience by designing a responsive and modern UI across all devices.',
-    technologies: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Firebase', 'ScrollReveal.js'],
-    image: '/images/exclusive-ecommerce.png',
-    demoLink: 'https://exclusive-ecommerce-pearl.vercel.app/',
-    githubLink: 'https://github.com/Kimo-Mo/Exclusive-ecommerce',
+      'A full-stack inventory platform featuring a Next.js 15.4.3 App Router frontend powered by React 19.1.0, TypeScript 5.8.3, Tailwind CSS 4.1.11, and Lucide React icons. The backend relies on PostgreSQL with Prisma 5.22.0, Next.js API routes, and a secure auth layer using NextAuth.js 5.0, CASL, and bcryptjs. Data validation, HTTP interactions, and user feedback are handled with Zod, Axios, and React Toastify respectively for end-to-end reliability.',
+    technologies: ['Next.js 15.4.3','React 19.1.0','TypeScript 5.8.3','Tailwind CSS 4.1.11','Lucide React','PostgreSQL','Prisma 5.22.0','Next.js API Routes','NextAuth.js 5.0','CASL','bcryptjs','Zod','Axios','React Toastify',],
+    image: '/images/inventory.png',
+    demoLink: 'https://inventory-prisma-postgre.vercel.app/',
+    githubLink: 'https://github.com/Tah5721312/inventory-prisma-postgre',
   },
 ];

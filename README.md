@@ -1,8 +1,8 @@
-# Kimo Dev Portfolio
+# Mohamed Abdel Fatah — Developer Portfolio
 
-A modern, responsive developer portfolio built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**. This project showcases the work, skills, and experience of Kareem Mohamed (Kimo), a passionate Frontend Developer from Cairo, Egypt.
+A modern, responsive portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS 4**. The site showcases the work, skills, and experience of **Mohamed Abdel Fatah**, a Cairo-based Fullstack Developer focusing on polished UI/UX, robust backends, and production-ready workflows.
 
-![Portfolio Screenshot](public/images/kimo-dev-portfolio.png)
+![Portfolio Screenshot](public/images/hero.png)
 
 ---
 
@@ -14,27 +14,24 @@ This portfolio highlights personal projects, professional experience, and skills
 
 ## ✨ Features
 
-- **Landing Page** with animated hero section
-- **Projects Showcase** with live demo and GitHub links
-- **Skills & Technologies** section
-- **Experience Timeline**
-- **Contact Form** (integrated via EmailJS)
-- **Dark/Light Theme Toggle**
-- **Responsive Design**
-- **Modern UI/UX**
+- **Hero & About** sections with smooth animations and theming
+- **Projects** showcase with live demos, GitHub links, and detailed stacks
+- **Skills grid** fed from structured data (`src/services/data/skills-icons.tsx`)
+- **Experience timeline** backed by `src/services/data/personalData.ts`
+- **Contact form** with EmailJS integration and form validation
+- **Dark/Light Theme Toggle** powered by custom ThemeProvider
+- **Responsive Layout** optimized for desktop and mobile
 
 ---
 
 ## 🛠️ Tech Stack
 
-- [Next.js 15](https://nextjs.org/)
-- [React 19](https://react.dev/)
-- [Tailwind CSS 4](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Radix UI](https://www.radix-ui.com/)
-- [EmailJS](https://www.emailjs.com/) (contact form)
-- [Zod](https://zod.dev/) (validation)
-- [Lucide React](https://lucide.dev/)
+- [Next.js 15 App Router](https://nextjs.org/) + [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/) with strict typing
+- [Tailwind CSS 4](https://tailwindcss.com/) & CSS variables
+- [shadcn/ui](https://ui.shadcn.com/) & [Radix UI](https://www.radix-ui.com/) primitives
+- [Lucide React](https://lucide.dev/) iconography
+- [EmailJS](https://www.emailjs.com/) + [Zod](https://zod.dev/) for the contact workflow
 
 ---
 
@@ -43,8 +40,8 @@ This portfolio highlights personal projects, professional experience, and skills
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/Kimo-Mo/kimo-dev-portfolio.git
-cd kimo-dev-portfolio
+git clone https://github.com/Tah5721312/portfolio.git
+cd portfolio
 pnpm install # or npm install / yarn install
 ```
 
@@ -55,6 +52,15 @@ pnpm dev # or npm run dev / yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+Create a `.env.local` with the values you use in development or in Vercel:
+
+```
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=...
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=...
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=...
+```
 
 ---
 
@@ -76,41 +82,50 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 ## 🏆 Projects Showcase
 
-### [Forever E-commerce](https://forever-ecommerce-mocha.vercel.app/)
+### [Clinic-app](https://clinic-app-prisma-postgre.vercel.app) — [GitHub](https://github.com/Tah5721312/clinic-app-prisma-postgre)
+Full clinic management experience built with Next.js 14 App Router, React 18, and TypeScript. Includes Tailwind CSS 3 UI, Jest tests, ESLint + Prettier formatting, Husky hooks, GitHub Actions, sitemap generation, and OG helpers for SEO-ready deployments.
 
-A fully functional e-commerce platform built with React.js, Bootstrap, and Firebase. Features product listing, search, cart, checkout, and authentication. [GitHub](https://github.com/Kimo-Mo/forever-ecommerce)
+### [Inventory Platform](https://inventory-prisma-postgre.vercel.app/) — [GitHub](https://github.com/Tah5721312/inventory-prisma-postgre)
+An end-to-end inventory system using Next.js 15.4.3 + React 19.1.0 with Tailwind CSS 4.1.11 and Lucide icons on the frontend. The backend stack features PostgreSQL, Prisma 5.22.0, Next.js API routes, NextAuth.js 5.0, CASL, bcryptjs, and supporting libraries like Zod, Axios, and React Toastify.
 
-### [Exclusive E-commerce](https://exclusive-ecommerce-pearl.vercel.app/)
+---
 
-Responsive e-commerce website using HTML5, Tailwind CSS, JavaScript, and Firebase. Includes cart, wishlist, authentication, and animated UI. [GitHub](https://github.com/Kimo-Mo/Exclusive-ecommerce)
+## 🧠 Skills Snapshot
+
+Data-driven skills live in `src/services/data/skills-icons.tsx`. Highlights include:
+
+- **Frontend:** HTML5, CSS3, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Material UI
+- **Backend:** Node.js, Express.js, RESTful APIs, Zod validation
+- **Databases:** PostgreSQL, MongoDB, Oracle, Prisma ORM
+- **Tools & Platforms:** Git, GitHub, Vercel, Postman
 
 ---
 
 ## 💼 Experience
 
-- **Buguard** (Frontend Developer, Intern) — Jul 2025 - Present
-- **ITI** (Frontend Developer, Intern) — Jul 2024 - Sep 2024
-- **Freelance** (Frontend Developer) — 2022 - Present
+- **Information Technology Institute (ITI)** — *Fullstack Developer*  
+  *Sept 2022 – Present*  
+  Building production-ready applications, integrating APIs, and delivering polished UI/UX for real clients and training programs.
 
 ---
 
 ## 📬 Contact
 
-- **Name:** Kareem Mohamed
+- **Name:** Mohamed Abdel Fatah
+- **Role:** Fullstack Developer
 - **Location:** Cairo, Egypt
-- **Email:** kimomo844@gmail.com
-- **LinkedIn:** [linkedin.com/in/kareem-dev](https://www.linkedin.com/in/kareem-dev/)
-- **GitHub:** [github.com/kimo-mo](https://github.com/kimo-mo)
-- **Instagram:** [@kareem_mohamed_19](https://www.instagram.com/kareem_mohamed_19/)
+- **Email:** Tah5721312@gmail.com
+- **LinkedIn:** [linkedin.com/in/mohamed-abdel-fattah-a09451206](https://www.linkedin.com/in/mohamed-abdel-fattah-a09451206/)
+- **GitHub:** [github.com/Tah5721312](https://github.com/Tah5721312)
+- **Phone:** +20 150 009 5053
 
 ---
 
 ## 🙏 Credits
 
-- Built and implemented by Kareem Mohamed
-- Inspired by modern developer portfolio best practices
-- Icons by [Lucide](https://lucide.dev/) and [Iconsax](https://iconsax.io/)
-- Design by ([Fawzy UI](https://www.figma.com/design/1uWab08g2jgbZjYFfahpC1/Portfolio%7C-Personal-Portfolio-%7C-5---Community-?node-id=0-1&t=KIfSqRrQrSZBZzyU-0))
+- Designed & implemented by Mohamed Abdel Fatah
+- Icons via [Lucide](https://lucide.dev/) & [Iconsax](https://iconsax.io/)
+- Built following modern portfolio best practices
 
 ---
 

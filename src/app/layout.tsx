@@ -1,6 +1,9 @@
+import type { Metadata } from 'next';
 import { IBM_Plex_Sans } from 'next/font/google';
+
 import './globals.css';
 import { ThemeProvider } from '@/components/layouts';
+import { personalData, socialLinks } from '@/services/data';
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -8,22 +11,48 @@ const ibmPlexSans = IBM_Plex_Sans({
   variable: '--font-ibm-plex-sans',
 });
 
-export const metadata = {
-  title: 'Tah  | Developer Portfolio',
-  description:
-    'Portfolio website of Tah : Web Developer, Designer, and Creator.',
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tah-dev-portfolio.vercel.app';
+const fullName = `${personalData.firstName} ${personalData.lastName}`;
+const title = `${fullName} | Developer Portfolio`;
+const description = `Portfolio website of ${fullName}: ${personalData.role}.`;
+const ogImage = `${siteUrl}/images/about.png`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: fullName,
+  url: siteUrl,
+  image: ogImage,
+  jobTitle: personalData.role,
+  sameAs: socialLinks.map((link) => link.href),
+  description,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  keywords: [
+    personalData.role,
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Frontend Developer',
+    'Fullstack Developer',
+  ],
+  authors: [{ name: fullName, url: siteUrl }],
   openGraph: {
-    title: 'Tah | Developer Portfolio',
-    description:
-      'Portfolio website of Tah : Web Developer, Designer, and Creator.',
-    url: 'https://Tah-dev-portfolio.vercel.app/',
-    siteName: 'Tah57',
+    title,
+    description,
+    url: siteUrl,
+    siteName: fullName,
     images: [
       {
-        url: 'https://Tah-dev-portfolio.vercel.app/images/about.png',
+        url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'Tah Portfolio Preview',
+        alt: `${fullName} Portfolio Preview`,
       },
     ],
     locale: 'en_US',
@@ -31,15 +60,17 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tah  | Developer Portfolio',
-    description:
-      'Portfolio website of Tah : Web Developer, Designer, and Creator.',
-    images: ['https://Tah-dev-portfolio.vercel.app/images/about.png'],
+    title,
+    description,
+    images: [ogImage],
   },
   icons: {
     icon: '/favicon.ico',
   },
   manifest: '/manifest.json',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
@@ -53,21 +84,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Person',
-              name: 'Tah ',
-              url: 'https://Tah-dev-portfolio.vercel.app/',
-              image: 'https://Tah-dev-portfolio.vercel.app/images/about.png',
-              jobTitle: 'Web Developer, Designer, Creator',
-              sameAs: [
-                'https://github.com/Tah57',
-                'https://linkedin.com/in/k-dev',
-                'https://instagram.com/kohamed_19',
-              ],
-              description:
-                'Portfolio website of Tah57: Web Developer, Designer, and Creator.',
-            }),
+            __html: JSON.stringify(structuredData),
           }}
         />
       </head>

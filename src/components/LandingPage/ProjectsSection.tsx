@@ -46,7 +46,7 @@ const ProjectsSection = () => {
         ))}
       </div>
       <div className="flex items-center justify-center mt-10">
-        <Link href="https://github.com/Kimo-Mo" target="_blank">
+        <Link href="https://github.com/Tah5721312" target="_blank">
           <IButton text="all projects" />
         </Link>
       </div>

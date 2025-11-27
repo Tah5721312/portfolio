@@ -43,7 +43,7 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
   return (
     <>
       <h1 className="font-serif text-3xl font-bold italic">
-        <Link href="/">KM</Link>
+        <Link href="/">TAH57</Link>
       </h1>
       <div className="flex flex-col gap-5 text-lg">
         {sections.map((s, i) => (
@@ -82,7 +82,7 @@ const SideBarContent = ({ setOpen }: SideBarContentProps) => {
           </div>
         </AnimatedWrapper>
         <AnimatedWrapper from="left" delay={0.30}>
-          <p>Copyright &copy;2025 Kimo Dev. All rights reserved.</p>
+          <p>Copyright &copy;2025 TAH57 Dev. All rights reserved.</p>
         </AnimatedWrapper>
       </div>
     </>

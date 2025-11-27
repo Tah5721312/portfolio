@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { QuoteDown, Whatsapp } from 'iconsax-reactjs';
 
 const age = new Date().getFullYear() - personalData.birthYear;
-const exp = new Date().getFullYear() - personalData.start_experiance;
+const exp = new Date().getFullYear() - personalData.experienceStartYear;
 
 const AboutSection = () => {
-  const { firstName, lastName, phone, email, address } = personalData;
+  const { firstName, lastName, phone, email, address, role } = personalData;
 
   return (
     <section id="about">
@@ -36,9 +36,7 @@ const AboutSection = () => {
           <h3 className="text-2xl lg:text-4xl font-bold capitalize bg-gradient bg-clip-text text-transparent mt-4 mb-3">
             {firstName} {lastName}
           </h3>
-          <p className="text-xl font-bold capitalize mb-10">
-            Fullstack developer{' '}
-          </p>
+          <p className="text-xl font-bold capitalize mb-10">{role}</p>
           <Link
             href="https://drive.google.com/file/d/1mTT5OIZOCpVIvxx_cqKNqgoJFFOamFyg/view?usp=drive_link"
             target="_blank">
@@ -68,7 +66,7 @@ const AboutSection = () => {
             <div className="flex flex-col gap-4">
               <p className="flex items-center gap-2 font-bold">
                 <span className="font-bold text-5xl bg-gradient bg-clip-text text-transparent">
-                {`${exp}`}
+                  {exp}
                 </span>
                 <span className="italic font-bold">
                   Years <br /> experience...
