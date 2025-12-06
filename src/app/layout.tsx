@@ -65,9 +65,21 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/images/about.png', sizes: '192x192', type: 'image/png' },
+      { url: '/images/about.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/about.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: fullName,
+  },
   alternates: {
     canonical: '/',
   },
@@ -81,6 +93,15 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        <meta name="application-name" content={`${fullName} Portfolio`} />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content={fullName} />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#141313" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <link rel="apple-touch-icon" href="/images/about.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

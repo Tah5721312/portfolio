@@ -1,16 +1,57 @@
 {
-  "name": "Kimo Mo | Developer Portfolio",
-  "short_name": "Kimo Portfolio",
+  "name": "Mohamed Abdel Fatah | Developer Portfolio",
+  "short_name": "Tah Portfolio",
+  "description": "Portfolio website of Mohamed Abdel Fatah: Fullstack Developer.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#141313",
-  "description": "Portfolio website of Kimo Mo: Web Developer, Designer, and Creator.",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "developer", "web"],
   "icons": [
     {
-      "src": "/images/favicon.ico",
+      "src": "/images/about.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/about.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
       "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/about.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "View my projects",
+      "url": "/#projects",
+      "icons": [{ "src": "/images/about.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch",
+      "url": "/#contact",
+      "icons": [{ "src": "/images/about.png", "sizes": "96x96" }]
     }
   ]
 }
