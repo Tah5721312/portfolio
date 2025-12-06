@@ -95,7 +95,7 @@ const ContactForm = () => {
         error instanceof Error
           ? error.message
           : typeof error === 'object' && error !== null && 'text' in error
-            ? String((error as { text?: string }).text)
+                 ? String((error as { text?: unknown }).text)
             : undefined;
       setStatus(
         errorMessage
