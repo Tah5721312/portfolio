@@ -2,8 +2,6 @@
 
 A modern, responsive portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS 4**. The site showcases the work, skills, and experience of **Mohamed Abdel Fatah**, a Cairo-based Fullstack Developer focusing on polished UI/UX, robust backends, and production-ready workflows.
 
-![Portfolio Screenshot](public/images/hero.png)
-
 ---
 
 ## 🚀 Overview
