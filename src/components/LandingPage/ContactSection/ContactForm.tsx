@@ -70,14 +70,24 @@ const ContactForm = () => {
     }
 
     try {
+      // Prepare template parameters - using multiple field name formats for compatibility
+      const templateParams = {
+        name: values.name,
+        email: values.email,
+        message: values.message,
+        // Also include common EmailJS field names
+        from_name: values.name,
+        from_email: values.email,
+        user_name: values.name,
+        user_email: values.email,
+      };
+
+      console.log('Sending email with params:', templateParams);
+
       const res = await emailjs.send(
         serviceId,
         templateId,
-        {
-          from_name: values.name,
-          from_email: values.email,
-          message: values.message,
-        },
+        templateParams,
         publicKey
       );
       
