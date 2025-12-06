@@ -13,10 +13,6 @@ import { MoveUpRight } from 'lucide-react';
 import { Label } from '@/components/ui';
 import { AnimatedWrapper } from '@/components/shared';
 
-const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
-
 const contactSchema = z.object({
   name: z
     .string()
@@ -55,22 +51,54 @@ const ContactForm = () => {
   const onSubmit = async (values: ContactFormData) => {
     setLoading(true);
     setStatus('Sending...');
+    
+    // Get environment variables at runtime
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    // Validate environment variables
+    if (!serviceId || !templateId || !publicKey) {
+      setLoading(false);
+      setStatus('❌ Email service is not configured. Please check environment variables.');
+      console.error('Missing EmailJS environment variables:', {
+        serviceId: !!serviceId,
+        templateId: !!templateId,
+        publicKey: !!publicKey,
+      });
+      return;
+    }
+
     try {
       const res = await emailjs.send(
         serviceId,
         templateId,
-        { ...values },
+        {
+          from_name: values.name,
+          from_email: values.email,
+          message: values.message,
+        },
         publicKey
       );
-      if (res.status === 200) {
+      
+      if (res.status === 200 || res.text === 'OK') {
         setStatus('✅ Message sent successfully!');
         reset();
+        // Clear status message after 5 seconds
+        setTimeout(() => setStatus(''), 5000);
+      } else {
+        setStatus('❌ Failed to send. Please try again.');
       }
-    } catch (error) {
-      console.error(error);
-      setStatus('❌ Failed to send. Please try again.');
+    } catch (error: any) {
+      console.error('EmailJS Error:', error);
+      setStatus(
+        error?.text 
+          ? `❌ ${error.text}` 
+          : '❌ Failed to send. Please try again later.'
+      );
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (
@@ -159,7 +187,18 @@ const ContactForm = () => {
           </Button>
         </AnimatedWrapper>
       </form>
-      {status && <p className="mt-4 text-sm">{status}</p>}
+      {status && (
+        <p
+          className={`mt-4 text-sm font-medium ${
+            status.includes('✅')
+              ? 'text-green-500'
+              : status.includes('❌')
+                ? 'text-red-500'
+                : 'text-background'
+          }`}>
+          {status}
+        </p>
+      )}
     </div>
   );
 };
