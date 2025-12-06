@@ -89,11 +89,17 @@ const ContactForm = () => {
       } else {
         setStatus('❌ Failed to send. Please try again.');
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error('EmailJS Error:', error);
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : typeof error === 'object' && error !== null && 'text' in error
+            ? String((error as { text?: string }).text)
+            : undefined;
       setStatus(
-        error?.text 
-          ? `❌ ${error.text}` 
+        errorMessage
+          ? `❌ ${errorMessage}`
           : '❌ Failed to send. Please try again later.'
       );
     } finally {

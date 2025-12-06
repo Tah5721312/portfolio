@@ -6,7 +6,6 @@ import {
   DrawerDescription,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
   Drawer as UIDrawer,
 } from '@/components/ui';
 import SideBarContent from './SideBarContent';
