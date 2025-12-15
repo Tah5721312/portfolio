@@ -19,4 +19,14 @@ export const projects = [
     demoLink: 'https://inventory-prisma-postgre.vercel.app/',
     githubLink: 'https://github.com/Tah5721312/inventory-prisma-postgre',
   },
+   {
+    id: '3',
+    title: 'E-commerce',
+    description:
+      'A full-stack E-commerce platform featuring a Next.js 15.4.3 App Router frontend powered by React 19.1.0, TypeScript 5.8.3, Tailwind CSS 4.1.11, and Lucide React icons. The backend relies on PostgreSQL with Prisma 5.22.0, Next.js API routes, and a secure auth layer using NextAuth.js 5.0, CASL, and bcryptjs. Data validation, HTTP interactions, and user feedback are handled with Zod, Axios, and React Toastify respectively for end-to-end reliability.',
+    technologies: ['Next.js 16.0.10','React 19.1.0','TypeScript 5.8.3','Tailwind CSS 4.1.11','Lucide React','PostgreSQL','Prisma 5.22.0','Next.js API Routes','NextAuth.js 5.0','CASL','bcryptjs','Zod','Axios','React Toastify',],
+    image: '/images/ecommerce.png',
+    demoLink: 'https://e-commerce-all.vercel.app/',
+    githubLink: 'https://github.com/Tah5721312/e-commerce-all',
+  },
 ];
