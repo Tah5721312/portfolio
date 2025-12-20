@@ -26,7 +26,7 @@ const ExperienceSection = () => {
         </AnimatedWrapper>
         <AnimatedWrapper from="right">
           <Link
-            href="https://drive.google.com/uc?export=download&id=1VOUbQJKR343CxeQg87A773tlt8QNM9xj"
+            href="https://drive.google.com/uc?export=download&id=1mTT5OIZOCpVIvxx_cqKNqgoJFFOamFyg"
             download>
             <IButton text="download my cv" />
           </Link>
