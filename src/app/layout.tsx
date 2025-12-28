@@ -67,11 +67,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
-      { url: '/images/about.png', sizes: '192x192', type: 'image/png' },
-      { url: '/images/about.png', sizes: '512x512', type: 'image/png' },
+      { url: '/icon1.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon1.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/images/about.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   manifest: '/manifest.json',
@@ -101,7 +101,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#141313" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <link rel="apple-touch-icon" href="/images/about.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
