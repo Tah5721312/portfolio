@@ -47,6 +47,6 @@ export const projects = [
     technologies: ['Next.js','React','PostgreSQL','TypeScript','Tailwind CSS','Lucide React','PostgreSQL','Prisma 5.22.0','Next.js API Routes','NextAuth.js 5.0','CASL','bcryptjs','Zod','Axios','React Toastify',],
     image: '/images/dental-clinic.png',
     demoLink: 'https://dental-clinic.vercel.app/',
-    // githubLink: 'https://github.com/Tah5721312/dental-clinic',
+    githubLink: 'https://github.com/Tah5721312/dental-clinic',
   },
 ];
