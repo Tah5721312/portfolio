@@ -46,7 +46,7 @@ export const projects = [
       'A full-stack dental clinic platform featuring a Next.js App Router frontend powered by React, TypeScript , Tailwind CSS, and Lucide React icons. The backend relies on PostgreSQL with Prisma 5.22.0, Next.js API routes, and a secure auth layer using NextAuth.js 5.0, CASL, and bcryptjs. Data validation, HTTP interactions, and user feedback are handled with Zod, Axios, and React Toastify respectively for end-to-end reliability.',
     technologies: ['Next.js','React','PostgreSQL','TypeScript','Tailwind CSS','Lucide React','PostgreSQL','Prisma 5.22.0','Next.js API Routes','NextAuth.js 5.0','CASL','bcryptjs','Zod','Axios','React Toastify',],
     image: '/images/dental-clinic.png',
-    demoLink: 'https://dental-clinic.vercel.app/',
-    // githubLink: 'https://github.com/Tah5721312/dental-clinic',
+    demoLink: 'https://dental-clinic-eta-teal.vercel.app/',
+   githubLink: 'https://github.com/Tah5721312/dental-clinic',
   },
 ];
